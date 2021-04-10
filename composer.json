@@ -1,0 +1,15 @@
+{
+    "name": "pejmankheyri/whmcs-irnic",
+    "description": "domain registration management by nic.ir",
+    "keywords": ["whmcs", "module", "addon", "module", "irnic", "nic", "domain", "registrar", "poll"],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "pejmankheyri",
+            "email": "pejmankheyri@gmail.com"
+        }
+    ],
+    "require": {
+        
+    }
+}
