@@ -13,7 +13,7 @@
 function irnic_config() {
 	$configarray = array(
 		'name' => 'IRNIC Domain Registrar', 
-		'version' => '1.0.1', 
+		'version' => '1.1.0', 
 		'author' => 'pejman kheyri', 
 		'description' => 'IR Domain Registrar', 
 		'language' => 'farsi', 
