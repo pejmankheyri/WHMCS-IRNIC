@@ -25,7 +25,25 @@ function irnic_config() {
 } 
 
 function irnic_activate() { 
-	//do noting for now
+    try {
+
+        $create_object = "CREATE TABLE IF NOT EXISTS 
+        `mod_irnic_poll` (
+  			`id` int(11) NOT NULL AUTO_INCREMENT,
+  			`poll_code` int(11) NOT NULL,
+  			`msgID` varchar(10) CHARACTER SET utf8 NOT NULL,
+  			`poll_index` varchar(100) CHARACTER SET utf8 NOT NULL,
+  			`poll_messages` varchar(200) CHARACTER SET utf8 NOT NULL,
+  			`poll_xml` text NOT NULL,
+  			`poll_mess_code` int(11) NOT NULL,
+  			`date_time` varchar(30) CHARACTER SET utf8 NOT NULL,
+  			PRIMARY KEY (`id`)
+		)
+        ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;";
+        $object_result = full_query($create_object);
+    } catch (\Exception $e) {
+        echo "Unable to create mod_irnic_poll Table: {$e->getMessage()}";
+    }
 } 
 
 function irnic_deactivate() { 
