@@ -10,44 +10,45 @@
 </p>
 <div dir="rtl">
 
-# ماژول مدیریت دامنه ir برای نماینده های irnic جهت استفاده در سیستم WHMCS
+# IR domain management module for irnic agents to use in WHMCS system
 
- یک افزونه کاربردی برای سیستم مدیریت هاستینگ WHMCS می باشد که نمایندگان سامانه irnic را قادر می سازد تا براحتی اقدام به ارتباط با nic.ir کرده و تمامی امکانات و اتوماسیون ها را داشته باشند.
+ It is a functional extension for the WHMCS hosting management system that enables the representatives of the irnic system to easily communicate with nic.ir and have all the facilities and automations.
 
-## نصب
+## Installation
 
-* محتویات پوشه `WHMCS-IRNIC` را در مسیر اصلی پروژه WHMCS کپی کنید.
-* افزونه را از طریق منوی `افزونه ها` فعال کنید.
-* [تنظیمات افزونه را انجام دهید.](https://github.com/pejmankheyri/WHMCS-IRNIC#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA)
+* Copy the contents of the `WHMCS-IRNIC` folder to the root path of the WHMCS project.
+* Activate the plugin through the `Plugins` menu.
+* [Configure the plugin.](https://github.com/pejmankheyri/WHMCS-IRNIC#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA)
 
-## امکانات
+## Features
 
-* امکان ثبت دامنه ir برای تمامی انواع پسوند های موجود در سامانه
-* امکان انتقال، تمدید، قفل و حذف دامنه های ir
-* مدیریت تمامی رابط های ممکن در سیستم توسط کاربر و در غیراینصورت توسط شرکت
-* ثبت شناسه جدید بدون واسطه برای تمامی کاربری های ممکن در سیستم
-* مشاهده لیست درخواست های ارسال شده
-* مدیریت لیست درخواست های ارسال شده
-* مدیریت poll request ها برای اتوماسیون درخواست های سیستم نیک
-* لاگ کردن تمامی اتفاقات رخ داده در ماژول
-* قابلیت sync کردن اطلاعات دامنه در پنل ادمین
-* قابلیت cron job برای مدیریت poll request ها
-* صفحات مجزا برای ثبت شناسه ایرنیک که در مسیر اصلی ماژول با عبارت irnic- شروع می شوند که می توانید در بخش کاربری از این صفحات استفاده کنید.
+* The possibility of registering the ir domain for all types of extensions in the system
+* Ability to transfer, renew, lock and delete ir domains
+* Management of all possible interfaces in the system by the user and otherwise by the company
+* Registration of a new ID without intermediaries for all possible users in the system
+* View the list of sent requests
+* Management of the list of sent requests
+* Management of poll requests for the automation of Nik system requests
+* Logging of all the events that happened in the module
+* The ability to sync domain information in the admin panel
+* cron job capability to manage poll requests
+* Separate pages for registering the IRNIC ID that start with the phrase IRNIC- in the main path of the module, which you can use in the user section.
 
-## تنظیمات
+## Settings
 
-* فایل زیپ گواهی که از سامانه نیک دریافت کرده اید را اکسترکت کرده و به مسیر `modules/registrars/irnic/` آپلود کنید.
-* فایل `modules/registrars/irnic/functions.php` را باز کنید و عبارات توکن و شناسه و عنوان فایل گواهی را داخل تابع __construct در ابتدای فایل و در جای مشخص شده وارد نمایید.
-* فایل `modules/registrars/irnic/Poll.php` را باز کنید و تنظیمات پایگاه داده سیستم خود را در ابتدای فایل و در متغیر های نام پایگاه داده، نام کاربری و رمزعبور وارد نمایید.
-* فایل `modules/registrars/irnic/poll_cron.php` را در cron job سیستم خود بصورت روزانه تنظیم کنید
+* Extract the zip file of the certificate you received from the irnic system and upload it to `modules/registrars/irnic/`.
+* Open the `modules/registrars/irnic/functions.php` file and enter the token expressions ID and title of the certificate file into the __construct function at the beginning of the file and in the specified place.
+* Open the `modules/registrars/irnic/Poll.php` file and enter your system database settings at the beginning of the file and in the database name, username, and password variables.
+* Set the `modules/registrars/irnic/poll_cron.php` file in the cron job of your system daily
 
-## کمک به توسعه
+  
+## Development Assistance
 
-از Pull request ها استقبال می کنیم.
+We welcome pull requests.
 
-برای تغییرات عمده ، لطفاً ابتدا یک issue را باز کنید تا در مورد آنچه می خواهید تغییر دهیم و بحث کنیم.
+For major changes, please open an issue first so we can discuss what you want to change.
 
-## لایسنس
+## License
 
 GPL-3.0
 
